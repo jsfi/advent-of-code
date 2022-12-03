@@ -1,3 +1,5 @@
+import { sumOfList } from '../sumOfList.js';
+
 export function sumCalories(lines) {
 	const elves = [];
 	let elf = [];
@@ -11,5 +13,5 @@ export function sumCalories(lines) {
 	}
 	elves.push(elf);
 
-	return elves.map(elf => elf.reduce((sum, val) => sum + val));
+	return elves.map(sumOfList);
 }
