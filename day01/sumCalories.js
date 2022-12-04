@@ -1,5 +1,9 @@
 import { sumOfList } from '../sumOfList.js';
 
+/**
+ * @param {string[]} lines
+ * @returns {number[]}
+ */
 export function sumCalories(lines) {
 	const elves = [];
 	let elf = [];

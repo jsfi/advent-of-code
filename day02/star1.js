@@ -1,4 +1,3 @@
-import { getLines } from '../getLines.js';
 import { getMoves } from './getMoves.js';
 import { getPoints } from './getPoints.js';
 import {
@@ -35,8 +34,7 @@ const resultMap = {
 	},
 };
 
-const lines = await getLines(import.meta.url);
-const moves = getMoves(lines);
+const moves = await getMoves();
 const points = getPoints(moves, resultMap);
 
 console.log(points);

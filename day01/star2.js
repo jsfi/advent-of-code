@@ -1,9 +1,7 @@
-import { getLines } from '../getLines.js';
 import { sumOfList } from '../sumOfList.js';
-import { sumCalories } from './sumCalories.js';
+import { getCalories } from './getCalories.js';
 
-const lines = await getLines(import.meta.url);
-const calories = sumCalories(lines);
+const calories = await getCalories();
 
 calories.sort((a, b) => b - a);
 

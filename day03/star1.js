@@ -1,16 +1,17 @@
 import { getLines } from '../getLines.js';
 import { sumOfList } from '../sumOfList.js';
 import { findSharedCharacters } from './findSharedCharacters.js';
-import { getPriorities } from './getPriorities.js';
+import { getPriority } from './getPriority.js';
 
 const lines = await getLines(import.meta.url);
-const rucksacks = lines.map(rucksack => {
-	const pivot = rucksack.length / 2;
-	return [rucksack.slice(0, pivot), rucksack.slice(pivot)];
-});
-const duplicateItems = rucksacks.map(([compartment1, compartment2]) =>
-	findSharedCharacters(compartment1, compartment2)
-).flat();
 
-const sumPriorities = sumOfList(getPriorities(duplicateItems));
-console.log(sumPriorities);
+let sumPrioritiesDuplicates = 0;
+for (const rucksack of lines) {
+	const pivot = rucksack.length / 2;
+	const compartment1 = rucksack.slice(0, pivot);
+	const compartment2 = rucksack.slice(pivot);
+
+	sumPrioritiesDuplicates += sumOfList(findSharedCharacters(compartment1, compartment2).map(getPriority));
+}
+
+console.log(sumPrioritiesDuplicates);
