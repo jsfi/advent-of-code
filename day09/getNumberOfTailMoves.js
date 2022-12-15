@@ -1,7 +1,5 @@
 import { getLines } from '../getLines.js';
 
-const lines = await getLines(import.meta.url);
-
 /**
  * @param {string} direction
  * @return {[number, number]}
@@ -61,9 +59,11 @@ function drawRope(rope) {
 
 /**
  * @param {[number, number][]} rope
- * @return {number}
+ * @return {Promise<number>}
  */
-export function getNumberOfTailMoves(rope) {
+export async function getNumberOfTailMoves(rope) {
+	const lines = await getLines(import.meta.url);
+
 	const tailMoves = [rope.at(-1)];
 
 	for (const line of lines) {
