@@ -1,0 +1,15 @@
+{
+  "name": "adventofcode",
+  "version": "0.0.1",
+  "main": "index.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsfi/adventofcode.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jsfi/adventofcode/issues"
+  },
+  "homepage": "https://github.com/jsfi/adventofcode"
+}
