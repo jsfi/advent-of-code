@@ -1,5 +1,5 @@
 import { getLines } from '../getLines.js';
-import { getNumbers } from './getNumbers.js';
+import { getNumbers } from '../getNumbers.js';
 
 const lines = await getLines(import.meta.url);
 
