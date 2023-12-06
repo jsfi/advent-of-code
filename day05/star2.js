@@ -6,7 +6,7 @@ const lines = await getLines(import.meta.url);
 let seeds = [];
 const almanac = new Map();
 const destinationToSource = new Map();
-let currentDestionation = '';
+let currentDestination = '';
 
 for (const line of lines) {
     if (line === '') {
@@ -27,12 +27,12 @@ for (const line of lines) {
         const [source, destination] = mapping.split('-to-');
         destinationToSource.set(destination, source);
         almanac.set(destination, []);
-        currentDestionation = destination;
+        currentDestination = destination;
         continue;
     }
 
     if (line.match(/^\d/)) {
-        almanac.get(currentDestionation).push(getNumbers(line));
+        almanac.get(currentDestination).push(getNumbers(line));
         continue;
     }
 
