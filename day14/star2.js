@@ -8,13 +8,13 @@ const platformRepeats = new Map();
 
 const platform = lines.map(line => line.split(''));
 const rows = platform.length;
-const cols = platform.at(0).length;
+const columns = platform.at(0).length;
 
 for (let cycle = 0; cycle < cycles; cycle++) {
 	// north
 	let moveToRowNorth = platform.at(0).map(() => 0);
 	for (let row = 0; row < rows; row++) {
-		for (let column = 0; column < cols; column++) {
+		for (let column = 0; column < columns; column++) {
 			const char = platform[row][column];
 			if (char === 'O') {
 				platform[row][column] = '.';
@@ -29,7 +29,7 @@ for (let cycle = 0; cycle < cycles; cycle++) {
 	// west
 	for (let row = 0; row < rows; row++) {
 		let moveToColumnWest = 0;
-		for (let column = 0; column < cols; column++) {
+		for (let column = 0; column < columns; column++) {
 			const char = platform[row][column];
 			if (char === 'O') {
 				platform[row][column] = '.';
@@ -44,7 +44,7 @@ for (let cycle = 0; cycle < cycles; cycle++) {
 	// south
 	let moveToRowSouth = platform.at(0).map(() => rows - 1);
 	for (let row = rows - 1; row >= 0; row--) {
-		for (let column = 0; column < cols; column++) {
+		for (let column = 0; column < columns; column++) {
 			const char = platform[row][column];
 			if (char === 'O') {
 				platform[row][column] = '.';
@@ -58,8 +58,8 @@ for (let cycle = 0; cycle < cycles; cycle++) {
 
 	// east
 	for (let row = 0; row < rows; row++) {
-		let moveToColumnWest = cols - 1;
-		for (let column = cols - 1; column >= 0; column--) {
+		let moveToColumnWest = columns - 1;
+		for (let column = columns - 1; column >= 0; column--) {
 			const char = platform[row][column];
 			if (char === 'O') {
 				platform[row][column] = '.';
@@ -85,7 +85,7 @@ for (let cycle = 0; cycle < cycles; cycle++) {
 
 let result = 0;
 for (let row = 0; row < rows; row++) {
-	for (let column = 0; column < cols; column++) {
+	for (let column = 0; column < columns; column++) {
 		const char = platform[row][column];
 		if (char === 'O') {
 			result += rows - row;
