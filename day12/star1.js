@@ -23,8 +23,8 @@ for (const line of lines) {
 			return;
 		}
 
-		replaceAndCheck(record.substring(0, index) + '.' + record.substring(index + 1));
-		replaceAndCheck(record.substring(0, index) + '#' + record.substring(index + 1));
+		replaceAndCheck(record.slice(0, index) + '.' + record.slice(index + 1));
+		replaceAndCheck(record.slice(0, index) + '#' + record.slice(index + 1));
 	}
 
 	replaceAndCheck(record);

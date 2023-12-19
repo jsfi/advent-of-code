@@ -1,9 +1,9 @@
 import { getLines } from '../getLines.js';
 
-export async function getMapData() {
+const lines = await getLines(import.meta.url);
 
-	const [ lineInstructions, , ...linesNetwork ] = await getLines(import.meta.url);
-
+export function getMapData() {
+	const [ lineInstructions, , ...linesNetwork ] = lines;
 	const instructions = lineInstructions.split('');
 
 	const networkMap = new Map();
@@ -16,7 +16,7 @@ export async function getMapData() {
 		const node = networkMap.get(source);
 
 		const [ left, right ] = destinations
-			.substring(1, destinations.length - 1)
+			.slice(1, -1)
 			.split(', ');
 		node.L = left;
 		node.R = right;

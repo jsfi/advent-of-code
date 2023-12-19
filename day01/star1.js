@@ -1,8 +1,8 @@
 import { getLines } from '../getLines.js';
 
-const isDigit = char => !Number.isNaN(Number(char));
-
 const lines = await getLines(import.meta.url);
+
+const isDigit = char => !Number.isNaN(Number(char));
 
 let result = 0;
 

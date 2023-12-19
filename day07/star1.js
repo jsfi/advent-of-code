@@ -1,6 +1,6 @@
 import { getHandCount, getHandsWithBets, getRankingHands } from './shared.js';
 
-const handsWithBets = await getHandsWithBets();
+const handsWithBets = getHandsWithBets();
 
 const [ addHandWithBetByCounts, getWinnings ] = getRankingHands([
 	'2', '3', '4', '5',

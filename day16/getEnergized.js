@@ -1,11 +1,11 @@
 import { getLines } from '../getLines.js';
 
+const lines = await getLines(import.meta.url);
+
 export const NORTH = 'NORTH';
 export const EAST = 'EAST';
 export const SOUTH = 'SOUTH';
 export const WEST = 'WEST';
-
-const lines = await getLines(import.meta.url);
 
 const grid = lines.map(line => line.split(''));
 export const rows = grid.length;

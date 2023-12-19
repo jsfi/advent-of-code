@@ -1,5 +1,7 @@
 import { getLines } from '../getLines.js';
 
+const lines = await getLines(import.meta.url);
+
 const stringDigits = new Map([
 	[ 'one', '1' ],
 	[ 'two', '2' ],
@@ -13,8 +15,6 @@ const stringDigits = new Map([
 ]);
 
 const isDigit = (char) => !Number.isNaN(Number(char));
-
-const lines = await getLines(import.meta.url);
 
 let result = 0;
 

@@ -1,6 +1,6 @@
 import { getMapData } from './getMapData.js';
 
-const [ getSteps, networkMap ] = await getMapData()
+const [ getSteps, networkMap ] = getMapData()
 
 const startNodeNames = Array.from(networkMap.keys())
 	.filter(key => key.endsWith('A'));

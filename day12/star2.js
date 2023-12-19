@@ -21,7 +21,7 @@ for (const line of lines) {
 		if (firstMatch) {
 			if (firstMatch[1].length === parsedGroup[0]) {
 				// continue with matching the rest of the record and group
-				return replaceAndCheck(record.substring(firstMatch[0].length), parsedGroup.slice(1));
+				return replaceAndCheck(record.slice(firstMatch[0].length), parsedGroup.slice(1));
 			}
 
 			return 0;
@@ -41,17 +41,14 @@ for (const line of lines) {
 
 		let count = 0;
 
-		count += replaceAndCheck(record.substring(0, index) + '.' + record.substring(index + 1), parsedGroup);
-		count += replaceAndCheck(record.substring(0, index) + '#' + record.substring(index + 1), parsedGroup);
+		count += replaceAndCheck(record.slice(0, index) + '.' + record.slice(index + 1), parsedGroup);
+		count += replaceAndCheck(record.slice(0, index) + '#' + record.slice(index + 1), parsedGroup);
 
 		cache.set(cacheKey, count);
 		return count;
 	}
 
-	const count = replaceAndCheck(record, parsedGroup);
-
-	console.log(line, count);
-	result += count;
+	result += replaceAndCheck(record, parsedGroup);
 }
 
 console.log(result);

@@ -1,5 +1,7 @@
 import { getLines } from '../getLines.js';
 
+const lines = await getLines(import.meta.url);
+
 const NORTH = 'NORTH';
 const EAST = 'EAST';
 const SOUTH = 'SOUTH';
@@ -29,9 +31,7 @@ const pipes = new Map([
 	[ 'S', [ NORTH, EAST, SOUTH, WEST ] ],
 ]);
 
-export async function getMapData() {
-
-	const lines = await getLines(import.meta.url);
+export function getMapData() {
 	const map = lines.map(line => line.split(''));
 
 	const isConnected = (row, column, direction) => {

@@ -1,9 +1,9 @@
 import { getLines } from '../getLines.js';
 import { getNumbers } from '../getNumbers.js';
 
-export async function getAllSequences() {
-	const lines = await getLines(import.meta.url);
+const lines = await getLines(import.meta.url);
 
+export function getAllSequences() {
 	return lines.map(line => {
 		const numbers = getNumbers(line);
 		const sequences = [ numbers ];

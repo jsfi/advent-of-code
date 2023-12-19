@@ -1,6 +1,6 @@
 import { getArea } from './getArea.js';
 
-console.log(await getArea((line) => {
+console.log(getArea((line) => {
 	const [ direction, stepsString ] = line.split(' ');
 	const steps = Number(stepsString);
 

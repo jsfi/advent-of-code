@@ -1,8 +1,8 @@
 import { getLines } from '../getLines.js';
 
-export async function getHandsWithBets() {
-	const lines = await getLines(import.meta.url);
+const lines = await getLines(import.meta.url);
 
+export function getHandsWithBets() {
 	return lines.map(line => {
 		const [ hand, bet ] = line.split(' ');
 		return [ hand.split(''), Number(bet) ];

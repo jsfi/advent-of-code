@@ -1,20 +1,6 @@
-import { getLines } from '../getLines.js';
+import { getMaps } from './getMaps.js';
 
-const lines = await getLines(import.meta.url);
-
-const maps = [];
-let currentMap = [];
-
-for (const line of lines) {
-	if (line === '') {
-		maps.push(currentMap);
-		currentMap = [];
-		continue;
-	}
-
-	currentMap.push(line.split(''));
-}
-maps.push(currentMap);
+const maps = getMaps();
 
 let result = 0;
 for (const map of maps) {

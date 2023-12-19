@@ -1,6 +1,6 @@
 import { getArea } from './getArea.js';
 
-console.log(await getArea((line) => {
+console.log(getArea((line) => {
 	const [ , , hex ] = line.split(' ');
 	const steps = Number.parseInt(hex.slice(2, 7), 16);
 	const directionDigit = hex.slice(7, 8);

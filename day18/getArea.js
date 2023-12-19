@@ -2,7 +2,7 @@ import { getLines } from '../getLines.js';
 
 const lines = await getLines(import.meta.url);
 
-export async function getArea(getDirectionAndSteps) {
+export function getArea(getDirectionAndSteps) {
 	let row = 0;
 	let column = 0;
 	let totalSteps = 0;

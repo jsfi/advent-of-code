@@ -1,5 +1,7 @@
 import { getLines } from '../getLines.js';
 
+const lines = await getLines(import.meta.url);
+
 const NORTH = 'NORTH';
 const EAST = 'EAST';
 const SOUTH = 'SOUTH';
@@ -44,8 +46,7 @@ const nextPosition = (row, column, direction) => {
 	}
 }
 
-export async function findMinimumHeatLoss(canMoveForward, canTurn) {
-	const lines = await getLines(import.meta.url);
+export function findMinimumHeatLoss(canMoveForward, canTurn) {
 	const grid = lines.map(line => line.split('').map(Number));
 	const rows = grid.length;
 	const columns = grid.at(0).length;

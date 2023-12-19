@@ -1,6 +1,6 @@
 import { getMapData } from './getMapData.js';
 
-const loop = await getMapData();
+const loop = getMapData();
 
 const corners = loop.filter(([ , , char ]) => char !== '-' && char !== '|');
 
