@@ -1,7 +1,7 @@
 import { getLines } from '../get-lines.ts';
 
 const lines = getLines(import.meta.url);
-const rows = lines.map(line => line.split(''));
+const rows = lines.map((line) => line.split(''));
 
 const searchWord = ['X', 'M', 'A', 'S'];
 
@@ -15,7 +15,7 @@ const match = (charIndex: number, row: number, col: number, dx: number, dy: numb
 	}
 
 	return match(charIndex + 1, row + dy, col + dx, dx, dy);
-}
+};
 
 let result = 0;
 for (let row = 0; row < rows.length; row++) {

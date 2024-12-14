@@ -1,6 +1,6 @@
 import { pageOrderingRules, updates } from './manual-data.ts';
 
-const unorderedUpdates = updates.filter(pages => {
+const unorderedUpdates = updates.filter((pages) => {
 	const requiredPages = new Set<number>();
 	for (const page of pages) {
 		if (requiredPages.has(page)) {

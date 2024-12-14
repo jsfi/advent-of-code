@@ -3,8 +3,8 @@ import { getLines } from '../get-lines.ts';
 const line = getLines(import.meta.url)[0];
 
 let position = 0;
-const spaces: Array<{ from: number, size: number }> = [];
-const files: Array<{ id: number, from: number, size: number }> = [];
+const spaces: Array<{ from: number; size: number }> = [];
+const files: Array<{ id: number; from: number; size: number }> = [];
 for (let i = 0; i < line.length; i++) {
 	const size = Number(line[i]);
 

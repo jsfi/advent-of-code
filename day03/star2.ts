@@ -6,7 +6,7 @@ type Mode =
 	| 'search' // Find next mul(
 	| 'read1' // Read number1
 	| 'read2' // Read number2
-	| 'disabled' // Disabled
+	| 'disabled'; // Disabled
 
 let mode: Mode = 'search';
 let number1 = '';
@@ -14,7 +14,7 @@ let number2 = '';
 let result = 0;
 
 for (let i = 0; i < line.length; i++) {
-	if (mode !== 'disabled' && line.slice(i, i + 7) === 'don\'t()') {
+	if (mode !== 'disabled' && line.slice(i, i + 7) === "don't()") {
 		mode = 'disabled';
 		i += 6;
 		continue;
@@ -29,7 +29,7 @@ for (let i = 0; i < line.length; i++) {
 		}
 	} else if (mode === 'search') {
 		// Find the next "mul(" and set the mode to "read1"
-		const slice = line.slice(i, i + 4)
+		const slice = line.slice(i, i + 4);
 		if (slice === 'mul(') {
 			mode = 'read1';
 			i += 3;
@@ -43,7 +43,7 @@ for (let i = 0; i < line.length; i++) {
 			number1 += char;
 		} else if (char === ',' && number1) {
 			mode = 'read2';
-		}  else {
+		} else {
 			number1 = '';
 			mode = 'search';
 		}

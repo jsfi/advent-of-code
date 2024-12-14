@@ -4,7 +4,13 @@ const lines = getLines(import.meta.url);
 
 const map = lines.map((line) => line.split('').map(Number));
 
-function findTrails(row: number, col: number, nextHeight: number, path = [[row, col]], trails = new Set<string>()): Set<string> {
+function findTrails(
+	row: number,
+	col: number,
+	nextHeight: number,
+	path = [[row, col]],
+	trails = new Set<string>(),
+): Set<string> {
 	[
 		[-1, 0],
 		[0, 1],
@@ -17,7 +23,7 @@ function findTrails(row: number, col: number, nextHeight: number, path = [[row, 
 		if (map[nextRow]?.[nextCol] === nextHeight) {
 			const nextPath = [...path, [nextRow, nextCol]];
 			if (nextHeight === 9) {
-				trails.add(nextPath.map(position => position.join('|')).join(','));
+				trails.add(nextPath.map((position) => position.join('|')).join(','));
 			} else {
 				findTrails(nextRow, nextCol, nextHeight + 1, nextPath, trails);
 			}

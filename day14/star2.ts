@@ -11,7 +11,7 @@ const robots = lines.map((line) => {
 	return {
 		position: [Number(match.x), Number(match.y)],
 		velocity: [Number(match.vx), Number(match.vy)],
-	}
+	};
 });
 
 let i = 0;

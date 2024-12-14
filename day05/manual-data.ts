@@ -2,7 +2,7 @@ import { getLines } from '../get-lines.ts';
 
 const lines = getLines(import.meta.url);
 
-export const pageOrderingRules = new Map<number, Array<number>>;
+export const pageOrderingRules = new Map<number, Array<number>>();
 export const updates: Array<Array<number>> = [];
 
 for (let i = 0; i < lines.length; i++) {

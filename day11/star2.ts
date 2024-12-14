@@ -9,7 +9,7 @@ for (let iteration = 0; iteration < 75; iteration++) {
 	const nextStoneMap: typeof stoneMap = new Map();
 	const addStones = (stone: number, count: number) => {
 		nextStoneMap.set(stone, (nextStoneMap.get(stone) ?? 0) + count);
-	}
+	};
 
 	for (const [stone, count] of stoneMap) {
 		if (stone === 0) {

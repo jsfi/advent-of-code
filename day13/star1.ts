@@ -9,8 +9,8 @@ const MAX = 100;
 const machines = [];
 for (let i = 0; i < lines.length; i += 4) {
 	const matchA = /X\+(?<x>\d+), Y\+(?<y>\d+)/.exec(lines[i])?.groups!;
-	const matchB = /X\+(?<x>\d+), Y\+(?<y>\d+)/.exec(lines[i+1])?.groups!;
-	const prize = /X=(?<x>\d+), Y=(?<y>\d+)/.exec(lines[i+2])?.groups!;
+	const matchB = /X\+(?<x>\d+), Y\+(?<y>\d+)/.exec(lines[i + 1])?.groups!;
+	const prize = /X=(?<x>\d+), Y=(?<y>\d+)/.exec(lines[i + 2])?.groups!;
 
 	machines.push({
 		a: {
@@ -25,7 +25,7 @@ for (let i = 0; i < lines.length; i += 4) {
 			x: Number(prize.x),
 			y: Number(prize.y),
 		},
-	})
+	});
 }
 
 let cost = 0;

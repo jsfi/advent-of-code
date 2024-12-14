@@ -5,7 +5,7 @@ const lines = getLines(import.meta.url);
 let maxValues = 0;
 const calibrations = lines.map((line) => {
 	const [calibrationResult, valuesString] = line.split(': ');
-	const values = valuesString.split(' ').map(Number)
+	const values = valuesString.split(' ').map(Number);
 
 	maxValues = Math.max(maxValues, values.length);
 
@@ -19,7 +19,7 @@ for (let i = 1; i < maxValues; i++) {
 	const lastOperators = operatorsPerCount[i - 1];
 	const operators: Operators = [];
 	for (const operator of lastOperators) {
-		operators.push([...operator, '+'], [...operator, '*'])
+		operators.push([...operator, '+'], [...operator, '*']);
 	}
 	operatorsPerCount.push(operators);
 }
@@ -28,7 +28,7 @@ let result = 0;
 for (const calibration of calibrations) {
 	const [calibrationResult, values] = calibration;
 	const count = values.length;
-	const operators = operatorsPerCount[count-1];
+	const operators = operatorsPerCount[count - 1];
 
 	for (const operator of operators) {
 		let operatorResult = values[0];

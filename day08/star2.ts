@@ -51,7 +51,7 @@ for (const [type, positions] of antennas) {
 			let antinodeX1 = x1 + dx1;
 			let antinodeY1 = y1 + dy1;
 
-			while(antinodeX1 >= 0 && antinodeX1 <= maxCol && antinodeY1 >= 0 && antinodeY1 <= maxRow) {
+			while (antinodeX1 >= 0 && antinodeX1 <= maxCol && antinodeY1 >= 0 && antinodeY1 <= maxRow) {
 				antinodes.add(`${antinodeX1},${antinodeY1}`);
 				antinodeX1 += dx1;
 				antinodeY1 += dy1;
@@ -63,7 +63,7 @@ for (const [type, positions] of antennas) {
 			let antinodeX2 = x2 + dx2;
 			let antinodeY2 = y2 + dy2;
 
-			while(antinodeX2 >= 0 && antinodeX2 <= maxCol && antinodeY2 >= 0 && antinodeY2 <= maxRow) {
+			while (antinodeX2 >= 0 && antinodeX2 <= maxCol && antinodeY2 >= 0 && antinodeY2 <= maxRow) {
 				antinodes.add(`${antinodeX2},${antinodeY2}`);
 				antinodeX2 += dx2;
 				antinodeY2 += dy2;

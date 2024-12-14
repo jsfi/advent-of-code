@@ -1,5 +1,5 @@
 import { getLines } from '../get-lines.ts';
-import { getIsSafe} from './get-is-safe.ts';
+import { getIsSafe } from './get-is-safe.ts';
 
 const lines = getLines(import.meta.url);
 

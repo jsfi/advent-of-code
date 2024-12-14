@@ -1,7 +1,7 @@
 import { getLines } from '../get-lines.ts';
 
 const lines = getLines(import.meta.url);
-const laboratory = lines.map(line => line.split(''));
+const laboratory = lines.map((line) => line.split(''));
 
 type Pair = [number, number];
 

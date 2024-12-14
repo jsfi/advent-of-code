@@ -68,7 +68,7 @@ const getFencePrice = (row: number, col: number): number => {
 	}
 
 	return plotSet.size * corners;
-}
+};
 
 let result = 0;
 for (let row = 0; row < garden.length; row++) {

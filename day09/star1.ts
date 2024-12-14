@@ -4,7 +4,7 @@ const line = getLines(import.meta.url)[0];
 
 let position = 0;
 const spaces: Array<number> = [];
-const files: Array<{ id: number, positions: Array<number> }> = [];
+const files: Array<{ id: number; positions: Array<number> }> = [];
 for (let i = 0; i < line.length; i++) {
 	const size = Number(line[i]);
 
