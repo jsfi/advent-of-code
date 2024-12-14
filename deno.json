@@ -51,7 +51,11 @@
     "day13-star1-test": "test=true deno run --allow-env=test --allow-read=./ --watch day13/star1.ts",
     "day13-star1": "deno run --allow-env=test --allow-read=./ day13/star1.ts",
     "day13-star2-test": "test=true deno run --allow-env=test --allow-read=./ --watch day13/star2.ts",
-    "day13-star2": "deno run --allow-env=test --allow-read=./ day13/star2.ts"
+    "day13-star2": "deno run --allow-env=test --allow-read=./ day13/star2.ts",
+    "day14-star1-test": "test=true deno run --allow-env=test --allow-read=./ --watch day14/star1.ts",
+    "day14-star1": "deno run --allow-env=test --allow-read=./ day14/star1.ts",
+    "day14-star2-test": "test=true deno run --allow-env=test --allow-read=./ --watch day14/star2.ts",
+    "day14-star2": "deno run --allow-env=test --allow-read=./ day14/star2.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1"
