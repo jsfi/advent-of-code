@@ -37,7 +37,7 @@ const findMatchingTowels = (pattern: string): boolean => {
 	}
 
 	return false;
-}
+};
 
 let result = 0;
 for (const pattern of patterns) {

@@ -55,4 +55,4 @@ nextByte: while (true) {
 	break;
 }
 
-console.log(bytes[nextByteIndex].join(','))
+console.log(bytes[nextByteIndex].join(','));

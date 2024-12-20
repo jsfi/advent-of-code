@@ -63,7 +63,7 @@ const findMatchingTowels = (pattern: string): bigint => {
 	}
 
 	return patternArrangements;
-}
+};
 
 let result = 0n;
 for (const pattern of patterns) {
