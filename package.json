@@ -23,6 +23,10 @@
     "day05-test1": "TEST=! node day05/star1.ts",
     "day05-star1": "node day05/star1.ts",
     "day05-test2": "TEST=! node day05/star2.ts",
-    "day05-star2": "node day05/star2.ts"
+    "day05-star2": "node day05/star2.ts",
+    "day06-test1": "TEST=! node day06/star1.ts",
+    "day06-star1": "node day06/star1.ts",
+    "day06-test2": "TEST=! node day06/star2.ts",
+    "day06-star2": "node day06/star2.ts"
   }
 }
